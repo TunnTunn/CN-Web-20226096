@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- Element Selections ---
     // Get references to all the HTML elements we will be working with.
     const searchInput = document.getElementById("searchInput");
-    const productItems = document.querySelectorAll(".product-item"); // Gets ALL product items
     const addProductBtn = document.getElementById("addProductBtn");
     const addProductForm = document.getElementById("addProductForm");
 
     // --- Feature 1: Product Search/Filter ---
     // This function will handle the logic for filtering products.
     function filterProducts() {
+        const productItems = document.querySelectorAll(".product-item"); // Gets ALL product items
         const searchTerm = searchInput.value.toLowerCase(); // Get the search text and make it lowercase
 
         // Loop through each product item
