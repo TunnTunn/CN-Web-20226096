@@ -1,0 +1,188 @@
+/* --- General Styles --- */
+/* These rules apply to the entire document */
+body {
+    font-family: Arial, sans-serif; /* Sets a clean, readable font */
+    line-height: 1.6; /* Sets the space between lines of text */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background color */
+    color: #333; /* Dark grey text color for better readability */
+}
+
+main {
+    max-width: 1200px; /* Limits the maximum width of the main content */
+    margin: 20px auto; /* Centers the main content horizontally */
+    padding: 0 20px; /* Adds some space on the left and right */
+}
+
+h1,
+h2,
+h3 {
+    color: #0056b3; /* Sets a blue color for headings */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: #0056b3; /* Blue background for the header */
+    color: #fff; /* White text color */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none; /* Removes the default bullet points */
+    display: flex; /* Arranges list items in a row */
+    justify-content: center; /* Centers the navigation links */
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px; /* Adds space between navigation links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none; /* Removes the underline from links */
+    font-weight: bold;
+}
+
+/* --- Product List --- */
+#product-list {
+    display: flex; /* Uses Flexbox to create a flexible layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    gap: 20px; /* Sets the space between product items */
+}
+
+.product-item {
+    background: #fff;
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounds the corners */
+    padding: 15px;
+    /* Each item will take up about 30% of the container's width, but can grow or shrink */
+    flex: 1 1 30%;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    min-width: 280px; /* Prevents items from becoming too narrow */
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: #e8491d; /* Orange color for the price to make it stand out */
+}
+
+/* --- Form --- */
+form {
+    max-width: 500px;
+    margin: 20px auto; /* Centers the form */
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form label {
+    display: block; /* Makes each label appear on its own line */
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+    width: 100%; /* Makes form fields take up the full width of the form */
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #0056b3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #004494; /* Darkens the button on hover */
+}
+
+/* --- Controls Section (Search and Add Button) --- */
+#controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#searchInput {
+    flex-grow: 1; /* Allows the search input to take up available space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#controls button {
+    padding: 8px 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#controls #searchBtn {
+    background-color: #007bff;
+}
+#controls #addProductBtn {
+    background-color: #28a745;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: #333;
+    color: #fff;
+}
+
+/* --- Helper and Utility Classes --- */
+.hidden {
+    display: none; /* A utility class to hide elements */
+}
+
+#addProductForm button[type="button"] {
+    background-color: #6c757d; /* Grey color for the cancel button */
+    margin-top: 5px;
+}
+
+#addProductForm button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* --- Responsive Design --- */
+/* This block of rules applies only when the screen width is 768px or less */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stacks the navigation links vertically */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #product-list {
+        flex-direction: column; /* Stacks the product items vertically */
+    }
+}
