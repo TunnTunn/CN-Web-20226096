@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>TungTunn Bookstore</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>TungTunn Bookstore</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="products">
+                <h2>Featured Products</h2>
+
+                <div id="controls">
+                    <input type="text" id="searchInput" placeholder="Search by book title..." />
+                    <button id="searchBtn">Search</button>
+                    <button id="addProductBtn">Add Product</button>
+                </div>
+
+                <div id="product-list">
+                    <article class="product-item">
+                        <h3>The Alchemist</h3>
+                        <p>The all-time bestselling book by Thuong Dai Anh.</p>
+                        <p class="price">Price: $8.99</p>
+                    </article>
+
+                    <article class="product-item">
+                        <h3>How to Win Friends and Influence People</h3>
+                        <p>The art of communication and human relations by Tung Tunn.</p>
+                        <p class="price">Price: $7.50</p>
+                    </article>
+
+                    <article class="product-item">
+                        <h3>Many Lives, Many Times</h3>
+                        <p>A journey to discover the laws of the universe and human life.</p>
+                        <p class="price">Price: $12.00</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="add-product-section">
+                <form id="addProductForm" class="hidden">
+                    <h3>Add a New Product</h3>
+
+                    <label for="newName">Product Name:</label>
+                    <input type="text" id="newName" required />
+
+                    <label for="newDesc">Description:</label>
+                    <textarea id="newDesc" rows="3"></textarea>
+
+                    <label for="newPrice">Price:</label>
+                    <input type="number" id="newPrice" required />
+
+                    <p id="errorMsg" style="color: red"></p>
+
+                    <button type="submit">Add</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 TungTunn Bookstore. All rights reserved.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
